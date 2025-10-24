@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TwinStar Store</title>
+        <link rel="stylesheet" href="tsstyle.css">
+        <link rel="icon" type="image/x-icon" href="image/logo/favicon.png">
+    </head>
+    <body>
+        <header>
+            <!-- navigation -->
+            <div class="navigation-toggle" onclick="navigationclick(this)">
+                <div class="navigation-toggle-transform1"></div>
+                <div class="navigation-toggle-transform2"></div>
+                <div class="navigation-toggle-transform3"></div>
+            </div>
+            <a href="index.html">
+                <div class="navigation-logo">
+                    <img src="image/logo/navlogo.png" alt="TwinStar Logo">
+                </div>
+            </a>
+            <div class="navigation-sidebar" id="navigation-sidebar">
+                <a href="index.html">
+                    <span class="navigation-sidebar-text">✦ㅤHome</span>
+                </a>
+                <a href="topupgame/topupgame.html">
+                    <span class="navigation-sidebar-text">✦ㅤTop-up Game</span>
+                </a>
+                <a href="vouchergame/vouchergame.html">
+                    <span class="navigation-sidebar-text">✦ㅤVoucher Game</span>
+                </a>
+                <a href="apppremium/apppremium.html">
+                    <span class="navigation-sidebar-text">✦ㅤApp Premium</span>
+                </a>
+                <a href="pulsakuotatoken/pulsakuotatoken.html">
+                    <span class="navigation-sidebar-text">✦ㅤPulsa, Kuota, Token</span>
+                </a>
+                <a href="socialmediaboost/socialmediaboost.html">
+                    <span class="navigation-sidebar-text">✦ㅤSocial Media Boost</span>
+                </a>
+                <a href="paidedit/paidedit.html">
+                    <span class="navigation-sidebar-text">✦ㅤPaid Edit</span>
+                </a>
+                <a href="jokigame/jokigame.html">
+                    <span class="navigation-sidebar-text">✦ㅤJoki Game</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1PHx1kTkh1E_jPE2ftbKJQtBPJSE0tT9Oa2h2gwAcu1k">
+                    <span class="navigation-sidebar-text">✦ㅤOrder Queue</span>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbArPsJJUM2YRFcBv335">
+                    <span class="navigation-sidebar-text">✦ㅤTestimoni</span>
+                </a>
+            </div>
+        </header>
+        <div class="navigation-sidebar-overlay" id="navigation-sidebar-overlay"></div>
+        <main>
+            <!-- banner -->
+            <section class="banner">
+                <picture>
+                    <source media="(min-width: 769px)" srcset="image/bannerdesktop.jpg">
+                    <img id="banner" src="image/banner.jpg" alt="TwinStar Banner">
+                </picture>
+            </section>
+            <!-- promo -->
+            <section class="promo">
+                <div class="promo-header">
+                    <h2>
+                        <span class="promo-title">Promo</span>
+                    </h2>
+                    <small class="wave-text">
+                        <span>Penawaran</span> <span>Eksklusif</span> <span>Terbatas!</span>
+                    </small>
+                </div>
+                <div class="promo-product">
+                    <div class="promo-item" data-link="ganti.html">
+                        <div class="promo-text">
+                            <h3>Ganti</h3>
+                            <h4>Ganti</h4>
+                            <h5>
+                                <span class="promo-realprice"><del>Ganti</del></span>
+                                <span class="promo-price">Ganti</span>
+                            </h5>
+                            <p class="promo-countdown" data-time="2026-10-04T23:59:59">00:00:00</p>
+                        </div>
+                        <div class="promo-image">
+                            <img src="image/ganti.png" alt="ganti">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- catalogue -->
+            <section class="catalogue">
+                <div class="catalogue-header">
+                    <h2>
+                        <span class="catalogue-title">Catalogue</span>
+                    </h2>
+                    <small class="wave-text">
+                        <span>Pilihan</span> <span>Produk</span> <span>Lengkap!</span>
+                    </small>
+                </div>
+                <div class="catalogue-category">
+                    <button class="catalogue-category-button active" data-tab="topupgame">
+                        Top-up Game
+                    </button>
+                    <button class="catalogue-category-button" data-tab="vouchergame">
+                        Voucher Game
+                    </button>
+                    <button class="catalogue-category-button" data-tab="apppremium">
+                        App Premium
+                    </button>
+                    <button class="catalogue-category-button" data-tab="pulsakuotatoken">
+                        Pulsa, Kuota, Token
+                    </button>
+                    <button class="catalogue-category-button" data-tab="socialmediaboost">
+                        Social Media Boost
+                    </button>
+                    <button class="catalogue-category-button" data-tab="paidedit">
+                        Paid Edit
+                    </button>
+                    <button class="catalogue-category-button" data-tab="jokigame">
+                        Joki Game
+                    </button>
+                </div>
+                <div class="catalogue-product active" id="topupgame">
+                    <div class="catalogue-item" data-link="topupgame/mlbb.html">
+                        <img src="image/icon/mlbb.webp" alt="Mobile Legends">
+                        <h3>Mobile Legends</h3>
+                        <h4>Moonton</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/pubgm.html">
+                        <img src="image/icon/pubgm.webp" alt="PUBG Mobile">
+                        <h3>PUBG Mobile</h3>
+                        <h4>Level Infinite</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/ff.html">
+                        <img src="image/icon/ff.png" alt="Free Fire">
+                        <h3>Free Fire</h3>
+                        <h4>Garena</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/topupgame.html">
+                        <img src="image/icon/moretopupgame.jpg" alt="More Top-up Games">
+                        <h3>View 54 Products</h3>
+                        <h4>All Top-up Games</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="vouchergame">
+                    <div class="catalogue-item" data-link="vouchergame/roblox.html">
+                        <img src="image/icon/roblox.png" alt="Roblox">
+                        <h3>Roblox</h3>
+                        <h4>Roblox Corporation</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/steam.html">
+                        <img src="image/icon/steam.jpg" alt="Steam">
+                        <h3>Steam (Indonesia)</h3>
+                        <h4>Steam</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/googleplay.html">
+                        <img src="image/icon/googleplay.jpg" alt="Google Play">
+                        <h3>Google Play (Indonesia)</h3>
+                        <h4>Google</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/vouchergame.html">
+                        <img src="image/icon/morevouchergame.jpg" alt="More Voucher Games">
+                        <h3>View 7 Products</h3>
+                        <h4>All Voucher Games</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="apppremium">
+                    <div class="catalogue-item" data-link="apppremium/alightmotion.html">
+                        <img src="image/icon/alightmotion.webp" alt="Alight Motion">
+                        <h3>Alight Motion</h3>
+                        <h4>Alight Creative, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/netflix.html">
+                        <img src="image/icon/netflix.webp" alt="Netflix">
+                        <h3>Netflix</h3>
+                        <h4>Netflix, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/spotify.html">
+                        <img src="image/icon/spotify.webp" alt="Spotify">
+                        <h3>Spotify</h3>
+                        <h4>Spotify AB</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/apppremium.html">
+                        <img src="image/icon/moreapppremium.jpg" alt="More Apps Premium">
+                        <h3>View 48 Products</h3>
+                        <h4>All Apps Premium</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="pulsakuotatoken">
+                    <div class="catalogue-item" data-link="pulsakuotatoken/telkomsel.html">
+                        <img src="image/icon/telkomsel.jpg" alt="Telkomsel">
+                        <h3>Pulsa & Kuota</h3>
+                        <h4>Telkomsel</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="pulsakuotatoken/byu.html">
+                        <img src="image/icon/byu.jpg" alt="By.U">
+                        <h3>Pulsa & Kuota</h3>
+                        <h4>By.U</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="pulsakuotatoken/xl.html">
+                        <img src="image/icon/xl.jpg" alt="XL">
+                        <h3>Pulsa & Kuota</h3>
+                        <h4>XL</h4></h4>
+                    </div>
+                    <div class="catalogue-item" data-link="pulsakuotatoken/pulsakuotatoken.html">
+                        <img src="image/icon/morepulsakuotatoken.jpg" alt="More Pulsa, Kuota, Token">
+                        <h3>View 8 Products</h3>
+                        <h4>All Pulsa, Kuota, Token</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="socialmediaboost">
+                    <div class="catalogue-item" data-link="socialmediaboost/tiktoklike.html">
+                        <img src="image/icon/tiktok.webp" alt="Boost Like TikTok">
+                        <h3>Boost Like</h3>
+                        <h4>TikTok</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="socialmediaboost/instagramlike.html">
+                        <img src="image/icon/instagram.webp" alt="Boost Like Instagram">
+                        <h3>Boost Like</h3>
+                        <h4>Instagram</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="socialmediaboost/tiktokview.html">
+                        <img src="image/icon/tiktok.webp" alt="Boost View TikTok">
+                        <h3>Boost View</h3>
+                        <h4>TikTok</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="socialmediaboost/instagramfollower.html">
+                        <img src="image/icon/instagram.webp" alt="Boost Follower Instagram">
+                        <h3>Boost Follower</h3>
+                        <h4>Instagram</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="paidedit">
+                    <div class="catalogue-item" data-link="paidedit/video.html">
+                        <img src="image/icon/video.jpg" alt="Edit Video">
+                        <h3>Edit Video</h3>
+                        <h4>Paid Edit</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="paidedit/design.html">
+                        <img src="image/icon/design.jpg" alt="Edit Design">
+                        <h3>Edit Design</h3>
+                        <h4>Paid Edit</h4></h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="jokigame">
+                    <div class="catalogue-item" data-link="jokigame/mlbb.html">
+                        <img src="image/icon/mlbb.webp" alt="Joki Mobile Legends">
+                        <h3>Mobile Legends</h3>
+                        <h4>Moonton</h4>
+                    </div>
+                </div>
+            </section>
+            <!-- meet the team -->
+            <!-- let be social -->
+        </main>
+        <footer>
+            <!-- footer -->
+            <div class="footer-logo">
+                <img src="image/logo/footlogo.png" alt="TwinStar Logo">
+                <p>TwinStar Store — Topup Cepat, Aman & Termurah. Pusat layanan digital terpercaya untuk Top-up Game, Voucher Game, App Premium, Pulsa, Kuota, Token PLN, Social Media Boost, dan Paid Edit. Proses cepat, harga kaki lima, pelayanan bintang lima!</p>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-followus">
+                    <h4>FOLLOW US</h4>
+                        <div class="footer-followus-icon">
+                            <a href="https://www.instagram.com/twinstarid">
+                                <img src="image/logo/instagram.png" alt="TwinStar Instagram">
+                            </a>
+                            <a href="https://chat.whatsapp.com/HzeNmtnpCmhFxKnELSSNYp">
+                                <img src="image/logo/whatsapp.png" alt="TwinStar WhatsApp">
+                            </a>
+                            <a href="https://linktr.ee/twinstarid">
+                                <img src="image/logo/linktree.png" alt="TwinStar LinkTree">
+                            </a>
+                        </div>
+                </div>
+                <div class="footer-helpcenter">
+                    <h4>HELP CENTER</h4>
+                        <a href="https://wa.me/6282129678431">
+                            <button>Customer Service</button>
+                        </a>
+                </div>
+            </div>
+        </footer>
+        <script src="tsscript.js"></script>
+    </body>
+</html>
