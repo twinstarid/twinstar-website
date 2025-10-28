@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TwinStar Store — Mobile Legends</title>
+        <link rel="stylesheet" href="mlbb.css">
+        <link rel="icon" type="image/x-icon" href="../misc/image/favicon.png">
+    </head>
+    <body>
+        <header>
+            <!-- NAVIGATION -->
+            <div class="navigation-toggle" onclick="navigationclick(this)">
+                <div class="navigation-toggle-transform1"></div>
+                <div class="navigation-toggle-transform2"></div>
+                <div class="navigation-toggle-transform3"></div>
+            </div>
+            <a href="index.html">
+                <div class="navigation-logo">
+                    <img src="../misc/image/navlogo.png" alt="TwinStar Logo">
+                </div>
+            </a>
+            <div class="navigation-sidebar" id="navigation-sidebar">
+                <a href="../index.html">
+                    <span class="navigation-sidebar-text">✦ㅤHome</span>
+                </a>
+                <a href="../catalogue.html">
+                    <span class="navigation-sidebar-text">✦ㅤCatalogue</span>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbArPsJJUM2YRFcBv335">
+                    <span class="navigation-sidebar-text">✦ㅤTestimoni</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1PHx1kTkh1E_jPE2ftbKJQtBPJSE0tT9Oa2h2gwAcu1k">
+                    <span class="navigation-sidebar-text">✦ㅤOrder Queue</span>
+                </a>
+            </div>
+        </header>
+        <div class="navigation-sidebar-overlay" id="navigation-sidebar-overlay"></div>
+        <main>
+            <!-- BANNER -->
+            <section class="banner">
+                <picture>
+                    <source media="(min-width: 769px)" srcset="../misc/image/bannerdesktop.jpg">
+                    <img id="banner" src="../misc/image/banner.jpg" alt="TwinStar Banner">
+                </picture>
+            </section>
+            <!-- PRODUCT INFO -->
+            <section class="product-info">
+                <div class="product-info-header">
+                    <h2>
+                        <span class="product-info-title">Mobile Legends</span>
+                    </h2>
+                    <small class="wave-text">
+                        <span>Moonton</span>
+                    </small>
+                </div>
+            </section>
+            <!-- CUSTOMER INFO -->
+            <section class="customer-info">
+                <div class="customer-info-header">
+                    <h2>
+                        <span class="customer-info-title">Informasi Pelanggan</span>
+                    </h2>
+                </div>
+                <hr>
+                <div class="customer-info-text">
+                    <label>Masukkan User ID</label>
+                </div>
+                <div class="customer-info-button">
+                    <input type="number" id="mlbbuid" placeholder="Contoh: 123456789">
+                </div>
+                <div class="customer-info-text">
+                    <label>Masukkan Server ID</label>
+                </div>
+                <div class="customer-info-button">
+                    <input type="number" id="mlbbsid" placeholder="Contoh: 12345">
+                </div>
+                <div class="customer-info-text">
+                    <label>Masukkan Nomor WhatsApp</label>
+                </div>
+                <div class="customer-info-button">
+                    <input type="number" id="nowa" placeholder="Contoh: 0123456789">
+                </div>
+                <div class="customer-info-result" id="mlbbnick"></div>
+            </section>
+            <!-- ITEM SELECT -->
+            <section class="item-select">
+                <div class="item-select-header">
+                    <h2>
+                        <span class="item-select-title">Pilih Produk</span>
+                    </h2>
+                </div>
+                <hr>
+                <div class="item-select-category">
+                    <button class="item-select-category-button active" data-tab="mlpromo">Promo</button>
+                    <button class="item-select-category-button" data-tab="mlid">Indonesia</button>
+                    <button class="item-select-category-button" data-tab="mlglobal">Global</button>
+                    <button class="item-select-category-button" data-tab="mlglobal">Brazil</button>
+                    <button class="item-select-category-button" data-tab="mlglobal">Malaysia</button>
+                    <button class="item-select-category-button" data-tab="mlglobal">Singapore</button>
+                    <button class="item-select-category-button" data-tab="mlglobal">Philippines</button>
+                </div>
+                <div class="item-select-product active" id="mlpromo">
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="Weekly Diamond Pass Slow" 
+                    data-price="21.050" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Pengiriman slow estimasi 3x24 jam<br>⤷ Bisa ditumpuk, cek batas max WDP<br>⤷ Salah ID / WDP full = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlwdp.png" alt="Weekly Diamond Pass">
+                        </div>
+                        <div class="item-select-item-badge">Ask</div>
+                        <div class="item-select-item-info">
+                            <h3>Weekly Diamond Pass Slow</h3>
+                            <h4>31.000</h4>
+                            <h5>21.050</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="Weekly Diamond Pass Semi" 
+                    data-price="22.050" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Pengiriman semi fast estimasi 1x24 jam<br>⤷ Bisa ditumpuk, cek batas max WDP<br>⤷ Salah ID / WDP full = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlwdp.png" alt="Weekly Diamond Pass">
+                        </div>
+                        <div class="item-select-item-badge">Ask</div>
+                        <div class="item-select-item-info">
+                            <h3>Weekly Diamond Pass Semi</h3>
+                            <h4>31.000</h4>
+                            <h5>22.050</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="59 Diamonds Slow" 
+                    data-price="12.800" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Estimasi 3x24 jam<br>⤷ Bisa ditumpuk, berlaku kelipatan<br>⤷ Salah ID = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm3.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ask</div>
+                        <div class="item-select-item-info">
+                            <h3>59 Diamonds Slow</h3>
+                            <h4>17.100</h4>
+                            <h5>12.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="295 Diamonds Slow" 
+                    data-price="56.500" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Estimasi 3x24 jam<br>⤷ Bisa ditumpuk, berlaku kelipatan<br>⤷ Salah ID = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ask</div>
+                        <div class="item-select-item-info">
+                            <h3>295 Diamonds Slow</h3>
+                            <h4>82.000</h4>
+                            <h5>56.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="1003 Diamonds Slow" 
+                    data-price="190.000" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Estimasi 3x24 jam<br>⤷ Bisa ditumpuk, berlaku kelipatan<br>⤷ Salah ID = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ask</div>
+                        <div class="item-select-item-info">
+                            <h3>1003 Diamonds Slow</h3>
+                            <h4>280.100</h4>
+                            <h5>190.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="Starlight Card December" 
+                    data-price="27.800" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Estimasi 3x24 jam<br>⤷ Bisa ditumpuk, cek batas max WDP<br>⤷ Salah ID / WDP full = no refund<br>⤷ Order = setuju & paham<br>⤷ No rush order, wajib sabar<br>⤷ Join saluran untuk pantau antrian">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlsl.png" alt="Starlight Card Basic">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>Starlight Card December</h3>
+                            <h4>40.000</h4>
+                            <h5>27.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="Starlight Card November" 
+                    data-price="29.300" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via gift, setelah berteman 8 hari atau lebih<br>⤷ Bisa ditumpuk, berlaku kelipatan<br>⤷ Dilarang unfoll dan telat follow akun gift<br>⤷ Telat follow denda 10k, unfoll hangus<br>⤷ Salah ID / Unfoll = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlsl.png" alt="Starlight Card Basic">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>Starlight Card November</h3>
+                            <h4>40.000</h4>
+                            <h5>29.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Promo" 
+                    data-item="Starlight Card Premium" 
+                    data-price="59.300" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via gift, setelah berteman 8 hari atau lebih<br>⤷ Bisa ditumpuk, berlaku kelipatan<br>⤷ Dilarang unfoll dan telat follow akun gift<br>⤷ Telat follow denda 10k, unfoll hangus<br>⤷ Salah ID / Unfoll = no refund<br>⤷ Order = setuju dan paham<br>⤷ No rush order, wajib sabar">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlslp.png" alt="Starlight Card Premium">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>Starlight Card Premium</h3>
+                            <h4>90.000</h4>
+                            <h5>59.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                </div>
+                <div class="item-select-product" id="mlid">
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="Weekly Diamond Pass" 
+                    data-price="27.500" 
+                    data-snk="⤷ Via ID, khusus region Indonesia<br>⤷ Pengiriman fast estimasi 2-5 menit<br>⤷ Bisa ditumpuk, cek batas max WDP<br>⤷ Salah ID / WDP full = no refund<br>⤷ Order = setuju dan paham">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlwdp.png" alt="Weekly Diamond Pass">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>Weekly Diamond Pass</h3>
+                            <h4>31.000</h4>
+                            <h5>27.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="Twilight Pass" 
+                    data-price="144.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mltp.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>Twilight Pass</h3>
+                            <h4>155.000</h4>
+                            <h5>144.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="3 Diamonds" 
+                    data-price="1.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm1.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>3 Diamonds</h3>
+                            <h4>1.171</h4>
+                            <h5>1.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="5 Diamonds" 
+                    data-price="1.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm1.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>5 Diamonds</h3>
+                            <h4>1.600</h4>
+                            <h5>1.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="10 Diamonds" 
+                    data-price="3.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm2.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>10 Diamonds</h3>
+                            <h4>3.500</h4>
+                            <h5>3.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="12 Diamonds" 
+                    data-price="3.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm2.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>12 Diamonds</h3>
+                            <h4>3.800</h4>
+                            <h5>3.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="14 Diamonds" 
+                    data-price="4.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm2.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>14 Diamonds</h3>
+                            <h4>4.450</h4>
+                            <h5>4.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="18 Diamonds" 
+                    data-price="5.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm2.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>18 Diamonds</h3>
+                            <h4>5.590</h4>
+                            <h5>5.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="19 Diamonds" 
+                    data-price="5.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm2.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>19 Diamonds</h3>
+                            <h4>6.000</h4>
+                            <h5>5.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="28 Diamonds" 
+                    data-price="7.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm3.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>28 Diamonds</h3>
+                            <h4>8.650</h4>
+                            <h5>7.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="gopay" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="36 Diamonds" 
+                    data-price="9.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm3.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>36 Diamonds</h3>
+                            <h4>11.200</h4>
+                            <h5>9.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="44 Diamonds" 
+                    data-price="11.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm3.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>44 Diamonds</h3>
+                            <h4>13.500</h4>
+                            <h5>11.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="46 Diamonds" 
+                    data-price="12.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm3.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>46 Diamonds</h3>
+                            <h4>13.900</h4>
+                            <h5>12.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="54 Diamonds" 
+                    data-price="14.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>54 Diamonds</h3>
+                            <h4>15.287</h4>
+                            <h5>14.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="59 Diamonds" 
+                    data-price="15.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>59 Diamonds</h3>
+                            <h4>17.100</h4>
+                            <h5>15.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="71 Diamonds" 
+                    data-price="19.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>71 Diamonds</h3>
+                            <h4>20.500</h4>
+                            <h5>19.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="74 Diamonds" 
+                    data-price="19.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>74 Diamonds</h3>
+                            <h4>21.500</h4>
+                            <h5>19.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="85 Diamonds" 
+                    data-price="22.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>85 Diamonds</h3>
+                            <h4>24.700</h4>
+                            <h5>22.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="88 Diamonds" 
+                    data-price="23.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm4.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>88 Diamonds</h3>
+                            <h4>26.800</h4>
+                            <h5>23.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="110 Diamonds" 
+                    data-price="29.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>110 Diamonds</h3>
+                            <h4>34.200</h4>
+                            <h5>29.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="113 Diamonds" 
+                    data-price="30.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>113 Diamonds</h3>
+                            <h4>36.000</h4>
+                            <h5>30.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="128 Diamonds" 
+                    data-price="34.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>128 Diamonds</h3>
+                            <h4>38.000</h4>
+                            <h5>34.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="148 Diamonds" 
+                    data-price="39.100" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>148 Diamonds</h3>
+                            <h4>43.000</h4>
+                            <h5>39.100</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="170 Diamonds" 
+                    data-price="44.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>170 Diamonds</h3>
+                            <h4>49.000</h4>
+                            <h5>44.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="176 Diamonds" 
+                    data-price="46.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>176 Diamonds</h3>
+                            <h4>51.000</h4>
+                            <h5>46.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="184 Diamonds" 
+                    data-price="48.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>184 Diamonds</h3>
+                            <h4>54.000</h4>
+                            <h5>48.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="222 Diamonds" 
+                    data-price="58.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>222 Diamonds</h3>
+                            <h4>65.000</h4>
+                            <h5>58.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="240 Diamonds" 
+                    data-price="62.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>240 Diamonds</h3>
+                            <h4>70.000</h4>
+                            <h5>62.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="258 Diamonds" 
+                    data-price="68.100" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>258 Diamonds</h3>
+                            <h4>72.000</h4>
+                            <h5>68.100</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="277 Diamonds" 
+                    data-price="73.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>277 Diamonds</h3>
+                            <h4>79.000</h4>
+                            <h5>73.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="284 Diamonds" 
+                    data-price="74.100" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>284 Diamonds</h3>
+                            <h4>80.000</h4>
+                            <h5>74.100</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="296 Diamonds" 
+                    data-price="76.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>296 Diamonds</h3>
+                            <h4>83.000</h4>
+                            <h5>76.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="301 Diamonds" 
+                    data-price="78.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>301 Diamonds</h3>
+                            <h4>86.000</h4>
+                            <h5>78.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="305 Diamonds" 
+                    data-price="80.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>305 Diamonds</h3>
+                            <h4>89.000</h4>
+                            <h5>80.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="333 Diamonds" 
+                    data-price="88.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>333 Diamonds</h3>
+                            <h4>96.000</h4>
+                            <h5>88.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="346 Diamonds" 
+                    data-price="90.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>346 Diamonds</h3>
+                            <h4>99.000</h4>
+                            <h5>90.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="370 Diamonds" 
+                    data-price="97.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>370 Diamonds</h3>
+                            <h4>106.000</h4>
+                            <h5>97.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="384 Diamonds" 
+                    data-price="101.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>384 Diamonds</h3>
+                            <h4>109.000</h4>
+                            <h5>101.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="408 Diamonds" 
+                    data-price="106.100" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>408 Diamonds</h3>
+                            <h4>118.000</h4>
+                            <h5>106.100</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="424 Diamonds" 
+                    data-price="111.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>424 Diamonds</h3>
+                            <h4>119.500</h4>
+                            <h5>111.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="452 Diamonds" 
+                    data-price="117.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm5.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>452 Diamonds</h3>
+                            <h4>128.000</h4>
+                            <h5>117.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="518 Diamonds" 
+                    data-price="135.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>518 Diamonds</h3>
+                            <h4>150.000</h4>
+                            <h5>135.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="568 Diamonds" 
+                    data-price="144.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>568 Diamonds</h3>
+                            <h4>158.000</h4>
+                            <h5>144.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="601 Diamonds" 
+                    data-price="153.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>601 Diamonds</h3>
+                            <h4>170.000</h4>
+                            <h5>153.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="642 Diamonds" 
+                    data-price="163.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>642 Diamonds</h3>
+                            <h4>180.000</h4>
+                            <h5>163.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="716 Diamonds" 
+                    data-price="182.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>716 Diamonds</h3>
+                            <h4>199.900</h4>
+                            <h5>182.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="758 Diamonds" 
+                    data-price="194.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>758 Diamonds</h3>
+                            <h4>215.500</h4>
+                            <h5>194.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="790 Diamonds" 
+                    data-price="202.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>790 Diamonds</h3>
+                            <h4>220.000</h4>
+                            <h5>202.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="845 Diamonds" 
+                    data-price="216.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>845 Diamonds</h3>
+                            <h4>239.552</h4>
+                            <h5>216.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="875 Diamonds" 
+                    data-price="220.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>875 Diamonds</h3>
+                            <h4>246.800</h4>
+                            <h5>220.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="938 Diamonds" 
+                    data-price="240.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>938 Diamonds</h3>
+                            <h4>269.000</h4>
+                            <h5>240.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="966 Diamonds" 
+                    data-price="242.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm6.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>966 Diamonds</h3>
+                            <h4>275.000</h4>
+                            <h5>242.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="1045 Diamonds" 
+                    data-price="264.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>1045 Diamonds</h3>
+                            <h4>285.000</h4>
+                            <h5>264.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="1136 Diamonds" 
+                    data-price="287.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>1136 Diamonds</h3>
+                            <h4>310.000</h4>
+                            <h5>287.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="1159 Diamonds" 
+                    data-price="293.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>1159 Diamonds</h3>
+                            <h4>350.000</h4>
+                            <h5>293.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="1443 Diamonds" 
+                    data-price="363.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>1443 Diamonds</h3>
+                            <h4>400.000</h4>
+                            <h5>363.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="1506 Diamonds" 
+                    data-price="384.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>1506 Diamonds</h3>
+                            <h4>415.000</h4>
+                            <h5>384.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="1604 Diamonds" 
+                    data-price="430.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>1604 Diamonds</h3>
+                            <h4>468.500</h4>
+                            <h5>430.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="2100 Diamonds" 
+                    data-price="478.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>2100 Diamonds</h3>
+                            <h4>519.000</h4>
+                            <h5>478.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="2232 Diamonds" 
+                    data-price="536.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>2232 Diamonds</h3>
+                            <h4>577.000</h4>
+                            <h5>536.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="2380 Diamonds" 
+                    data-price="574.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>2380 Diamonds</h3>
+                            <h4>619.000</h4>
+                            <h5>574.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="2578 Diamonds" 
+                    data-price="621.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>2578 Diamonds</h3>
+                            <h4>680.000</h4>
+                            <h5>621.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="2625 Diamonds" 
+                    data-price="634.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>2625 Diamonds</h3>
+                            <h4>699.000</h4>
+                            <h5>634.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="3453 Diamonds" 
+                    data-price="841.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>3453 Diamonds</h3>
+                            <h4>920.000</h4>
+                            <h5>841.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="3738 Diamonds" 
+                    data-price="919.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>3738 Diamonds</h3>
+                            <h4>990.000</h4>
+                            <h5>919.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="4020 Diamonds" 
+                    data-price="955.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>4020 Diamonds</h3>
+                            <h4>1.115.000</h4>
+                            <h5>955.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="4588 Diamonds" 
+                    data-price="1.099.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>4588 Diamonds</h3>
+                            <h4>1.230.000</h4>
+                            <h5>1.099.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="4830 Diamonds" 
+                    data-price="1.147.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm7.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>4830 Diamonds</h3>
+                            <h4>1.365.000</h4>
+                            <h5>1.147.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="5398 Diamonds" 
+                    data-price="1.290.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>5398 Diamonds</h3>
+                            <h4>1.500.080</h4>
+                            <h5>1.290.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="6030 Diamonds" 
+                    data-price="1.433.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>6030 Diamonds</h3>
+                            <h4>1.680.000</h4>
+                            <h5>1.433.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="6840 Diamonds" 
+                    data-price="1.624.800" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>6840 Diamonds</h3>
+                            <h4>1.790.985</h4>
+                            <h5>1.624.800</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="8040 Diamonds" 
+                    data-price="1.911.200" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>8040 Diamonds</h3>
+                            <h4>2.059.999</h4>
+                            <h5>1.911.200</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="9660 Diamonds" 
+                    data-price="2.292.900" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>9660 Diamonds</h3>
+                            <h4>2.499.999</h4>
+                            <h5>2.292.900</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="10050 Diamonds" 
+                    data-price="2.388.600" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>10050 Diamonds</h3>
+                            <h4>2.599.999</h4>
+                            <h5>2.388.600</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="14490 Diamonds" 
+                    data-price="3.438.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>14490 Diamonds</h3>
+                            <h4>3.700.000</h4>
+                            <h5>3.438.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="16080 Diamonds" 
+                    data-price="3.820.500" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>16080 Diamonds</h3>
+                            <h4>4.150.000</h4>
+                            <h5>3.820.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="18090 Diamonds" 
+                    data-price="4.297.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>18090 Diamonds</h3>
+                            <h4>4.857.507</h4>
+                            <h5>4.297.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="19320 Diamonds" 
+                    data-price="4.583.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>19320 Diamonds</h3>
+                            <h4>4.990.000</h4>
+                            <h5>4.583.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="20100 Diamonds" 
+                    data-price="4.775.000" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>20100 Diamonds</h3>
+                            <h4>5.300.000</h4>
+                            <h5>4.775.000</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="21330 Diamonds" 
+                    data-price=5.061.000 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>21330 Diamonds</h3>
+                            <h4>5.500.000</h4>
+                            <h5>5.061.000</h5></h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="23340 Diamonds" 
+                    data-price="5.538.300" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>23340 Diamonds</h3>
+                            <h4>5.900.000</h4>
+                            <h5>5.538.300</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="24150 Diamonds" 
+                    data-price="5.729.100" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>24150 Diamonds</h3>
+                            <h4>6.235.689</h4>
+                            <h5>5.729.100</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="26160 Diamonds" 
+                    data-price="6.206.400" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>26160 Diamonds</h3>
+                            <h4>6.755.223</h4>
+                            <h5>6.206.400</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Indonesia" 
+                    data-item="28170 Diamonds" 
+                    data-price="6.683.700" 
+                    data-snk="">
+                        <div class="item-select-item-image">
+                            <img src="icon/mldm8.png" alt="Diamond">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>28170 Diamonds</h3>
+                            <h4>7.120.320</h4>
+                            <h5>6.683.700</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                </div>
+                <div class="item-select-product" id="mlglobal">
+                    <div class="item-select-item" 
+                    data-payment="danagopayqris" 
+                    data-category="Top-up Game" 
+                    data-product="Mobile Legends Global" 
+                    data-item="Weekly Diamond Pass" 
+                    data-price="25.500" 
+                    data-snk="⤷ Tanyakan stok & harga sebelum order<br>⤷ Via ID, all region kecuali MY/SG/RS<br>⤷ Estimasi 3x24 jam<br>⤷ Bisa ditumpuk, cek batas max WDP<br>⤷ Salah ID / WDP full = no refund<br>⤷ Order = setuju & paham<br>⤷ No rush order, wajib sabar<br>⤷ Join saluran untuk pantau antrian">
+                        <div class="item-select-item-image">
+                            <img src="icon/mlwdp.png" alt="Weekly Diamond Pass">
+                        </div>
+                        <div class="item-select-item-badge">Ready</div>
+                        <div class="item-select-item-info">
+                            <h3>Weekly Diamond Pass</h3>
+                            <h4>31.000</h4>
+                            <h5>25.500</h5>
+                        </div>
+                        <button class="item-select-item-snk">?</button>
+                    </div>
+                </div>
+            </section>
+            <!-- PAYMENT SELECT -->
+            <section class="payment-select">
+                <div class="payment-select-header">
+                    <h2>
+                        <span class="payment-select-title">Pilih Metode Pembayaran</span>
+                    </h2>
+                </div>
+                <hr>
+                <div class="payment-select-list" id="danagopayqris">
+                    <button class="payment-select-option" data-pay="Dana">
+                        <img src="../misc/image/dana.png" class="payment-select-logo" alt="Dana">
+                    </button>
+                    <button class="payment-select-option" data-pay="Gopay">
+                        <img src="../misc/image/gopay.png" class="payment-select-logo" alt="Gopay">
+                    </button>
+                    <button class="payment-select-option" data-pay="QRIS">
+                        <img src="../misc/image/qris.png" class="payment-select-logo" alt="QRIS">
+                    </button>
+                </div>
+                <div class="payment-select-list" id="gopayqris">
+                    <button class="payment-select-option" data-pay="Gopay">
+                        <img src="../misc/image/gopay.png" class="payment-select-logo" alt="Gopay">
+                    </button>
+                    <button class="payment-select-option" data-pay="QRIS">
+                        <img src="../misc/image/qris.png" class="payment-select-logo" alt="QRIS">
+                    </button>
+                </div>
+                <div class="payment-select-list" id="gopay">
+                    <button class="payment-select-option" data-pay="Gopay">
+                        <img src="../misc/image/gopay.png" class="payment-select-logo" alt="Gopay">
+                    </button>
+                </div>
+            </section>
+            <!-- CONFIRM ORDER -->
+            <section class="confirm-order">
+                <div class="confirm-order-header">
+                    <h2>
+                        <span class="confirm-order-title">Konfirmasi Pembelian</span>
+                    </h2>
+                </div>
+                <hr>
+                <div class="confirm-order-button">
+                    <button class="confirm-button" id="confirmbutton">Order Sekarang</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- FOOTER -->
+            <div class="footer-logo">
+                <img src="../misc/image/footlogo.png" alt="TwinStar Logo">
+                <p>Pusat layanan digital tercepat, teraman, termurah dan terpercaya untuk Top-up Game, Voucher Game, App Premium, Social Media Boost, dan Paid Edit. Proses cepat, harga kaki lima, pelayanan bintang lima!</p>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-followus">
+                    <h4>FOLLOW US</h4>
+                        <div class="footer-followus-icon">
+                            <a href="https://www.instagram.com/twinstarid">
+                                <img src="../misc/image/instagram.png" alt="TwinStar Instagram">
+                            </a>
+                            <a href="https://chat.whatsapp.com/HzeNmtnpCmhFxKnELSSNYp">
+                                <img src="../misc/image/whatsapp.png" alt="TwinStar WhatsApp">
+                            </a>
+                            <a href="https://linktr.ee/twinstarid">
+                                <img src="../misc/image/linktree.png" alt="TwinStar LinkTree">
+                            </a>
+                        </div>
+                </div>
+                <div class="footer-helpcenter">
+                    <h4>HELP CENTER</h4>
+                        <a href="https://wa.me/6282129678431">
+                            <button>Customer Service</button>
+                        </a>
+                </div>
+            </div>
+        </footer>
+        <script src="mlbb.js"></script>
+    </body>
+</html>
