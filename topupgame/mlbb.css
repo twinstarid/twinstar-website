@@ -214,6 +214,10 @@ main {
     font-family: "TSMedium";
     font-size: 15px;
 }
+body, main, section {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 .item-select {
     padding: 15px 15px;
