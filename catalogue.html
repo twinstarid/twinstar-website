@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TwinStar Store — Catalogue</title>
+        <link rel="stylesheet" href="catalogue.css">
+        <link rel="icon" type="image/x-icon" href="misc/image/favicon.png">
+    </head>
+    <body>
+        <header>
+            <!-- NAVIGATION -->
+            <div class="navigation-toggle" onclick="navigationclick(this)">
+                <div class="navigation-toggle-transform1"></div>
+                <div class="navigation-toggle-transform2"></div>
+                <div class="navigation-toggle-transform3"></div>
+            </div>
+            <a href="index.html">
+                <div class="navigation-logo">
+                    <img src="misc/image/navlogo.png" alt="TwinStar Logo">
+                </div>
+            </a>
+            <div class="navigation-sidebar" id="navigation-sidebar">
+                <a href="index.html">
+                    <span class="navigation-sidebar-text">✦ㅤHome</span>
+                </a>
+                <a href="catalogue.html">
+                    <span class="navigation-sidebar-text">✦ㅤCatalogue</span>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbArPsJJUM2YRFcBv335">
+                    <span class="navigation-sidebar-text">✦ㅤTestimoni</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1PHx1kTkh1E_jPE2ftbKJQtBPJSE0tT9Oa2h2gwAcu1k">
+                    <span class="navigation-sidebar-text">✦ㅤOrder Queue</span>
+                </a>
+            </div>
+        </header>
+        <div class="navigation-sidebar-overlay" id="navigation-sidebar-overlay"></div>
+        <main>
+            <!-- BANNER -->
+            <section class="banner">
+                <picture>
+                    <source media="(min-width: 769px)" srcset="misc/image/bannerdesktop.jpg">
+                    <img id="banner" src="misc/image/banner.jpg" alt="TwinStar Banner">
+                </picture>
+            </section>
+            <!-- CATALOGUE -->
+            <section class="catalogue">
+                <div class="catalogue-header">
+                    <h2>
+                        <span class="catalogue-title">Catalogue</span>
+                    </h2>
+                    <small class="wave-text">
+                        <span>Pilihan</span> <span>Produk</span> <span>Lengkap!</span>
+                    </small>
+                </div>
+                <div class="catalogue-category">
+                    <button class="catalogue-category-button active" data-tab="topupgame">
+                        Top-up Game
+                    </button>
+                    <button class="catalogue-category-button" data-tab="vouchergame">
+                        Voucher Game
+                    </button>
+                    <button class="catalogue-category-button" data-tab="apppremium">
+                        App Premium
+                    </button>
+                    <button class="catalogue-category-button" data-tab="socialmediaboost">
+                        Social Media Boost
+                    </button>
+                    <button class="catalogue-category-button" data-tab="paidedit">
+                        Paid Edit
+                    </button>
+                </div>
+                <div class="catalogue-product active" id="topupgame">
+                    <div class="catalogue-item" data-link="topupgame/mlbb.html">
+                        <img src="topupgame/logo/mlbb.webp" alt="Mobile Legends">
+                        <h3>Mobile Legends</h3>
+                        <h4>Moonton</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/mcgg.html">
+                        <img src="topupgame/logo/mcgg.webp" alt="Magic Chess: Go Go">
+                        <h3>Magic Chess: Go Go</h3>
+                        <h4>Vizta Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/mobrush.html">
+                        <img src="topupgame/logo/mobrush.jpg" alt="Mob Rush">
+                        <h3>Mob Rush</h3>
+                        <h4>Vizta Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/pubgm.html">
+                        <img src="topupgame/logo/pubgm.webp" alt="PUBG Mobile">
+                        <h3>PUBG Mobile</h3>
+                        <h4>Level Infinite</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/ff.html">
+                        <img src="topupgame/logo/ff.png" alt="Free Fire">
+                        <h3>Free Fire</h3>
+                        <h4>Garena</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/codm.html">
+                        <img src="topupgame/logo/codm.webp" alt="Call of Duty Mobile">
+                        <h3>Call of Duty Mobile</h3>
+                        <h4>Garena</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/valorant.html">
+                        <img src="topupgame/logo/valorant.png" alt="Valorant">
+                        <h3>Valorant</h3>
+                        <h4>Riot Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/eafc.html">
+                        <img src="topupgame/logo/eafc.webp" alt="EA Esports FC Mobile">
+                        <h3>EA Sports FC Mobile</h3>
+                        <h4>Electronic Arts</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/hok.html">
+                        <img src="topupgame/logo/hok.webp" alt="Honor of Kings">
+                        <h3>Honor of Kings</h3>
+                        <h4>Level Infinite</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/aov.html">
+                        <img src="topupgame/logo/aov.jpg" alt="Arena of Valor">
+                        <h3>Arena of Valor</h3>
+                        <h4>Garena</4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/lolwr.html">
+                        <img src="topupgame/logo/lolwr.webp" alt="League of Legends: Wild Rift">
+                        <h3>League of Legends:<br>Wild Rift</h3>
+                        <h4>Riot Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/lol.html">
+                        <img src="topupgame/logo/lol.png" alt="League of Legends">
+                        <h3>League of Legends (PC)</h3>
+                        <h4>Riot Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/genshinimpact.html">
+                        <img src="topupgame/logo/genshinimpact.webp" alt="Genshin Impact">
+                        <h3>Genshin Impact</h3>
+                        <h4>Hoyoverse</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/honkaistarrail.html">
+                        <img src="topupgame/logo/honkaistarrail.webp" alt="Honkai: Star Rail">
+                        <h3>Honkai: Star Rail</h3>
+                        <h4>Hoyoverse</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/honkaiimpact.html">
+                        <img src="topupgame/logo/honkaiimpact.webp" alt="Honkai Impact 3">
+                        <h3>Honkai Impact 3</h3>
+                        <h4>Hoyoverse</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/zenlesszonezero.html">
+                        <img src="topupgame/logo/zenlesszonezero.webp" alt="Zenless Zone Zero">
+                        <h3>Zenless Zone Zero</h3>
+                        <h4>Hoyoverse</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/ragnaroxng.html">
+                        <img src="topupgame/logo/ragnaroxng.webp" alt="Ragnarox X: Next Generation">
+                        <h3>Ragnarok X:<br>Next Generation</h3>
+                        <h4>Nuverse</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/ragnaroxo.html">
+                        <img src="topupgame/logo/ragnaroxo.webp" alt="Ragnarok Origin">
+                        <h3>Ragnarok Origin</h3>
+                        <h4>Gravity Corporation</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/ragnarokm.html">
+                        <img src="topupgame/logo/ragnarokm.webp" alt="Ragnarok M: Classic">
+                        <h3>Ragnarok M: Classic</h3>
+                        <h4>Gravity Interactive</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/sausageman.html">
+                        <img src="topupgame/logo/sausageman.webp" alt="Sausage Man">
+                        <h3>Sausage Man</h3>
+                        <h4>XD Entertainment</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/pb.html">
+                        <img src="topupgame/logo/pb.webp" alt="Point Blank">
+                        <h3>Point Blank</h3>
+                        <h4>Zepetto</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/bloodstrike.html">
+                        <img src="topupgame/logo/bloodstrike.webp" alt="Blood Strike">
+                        <h3>Blood Strike</h3>
+                        <h4>NetEase Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/undawn.html">
+                        <img src="topupgame/logo/undawn.webp" alt="Undawn">
+                        <h3>Undawn</h3>
+                        <h4>Garena</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/lifeafter.html">
+                        <img src="topupgame/logo/lifeafter.webp" alt="LifeAfter">
+                        <h3>LifeAfter</h3>
+                        <h4>NetEase Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/marvelrivals.html">
+                        <img src="topupgame/logo/marvelrivals.jpg" alt="Marvel Rivals">
+                        <h3>Marvel Rivals</h3>
+                        <h4>NetEase Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/marvelduel.html">
+                        <img src="topupgame/logo/marvelduel.webp" alt="Marvel Duel">
+                        <h3>Marvel Duel</h3>
+                        <h4>Exptional Global</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/teamfighttactics.html">
+                        <img src="topupgame/logo/teamfighttactics.webp" alt="TFT: Teamfight Tactics">
+                        <h3>TFT: Teamfight Tactics</h3>
+                        <h4>Riot Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/eggyparty.html">
+                        <img src="topupgame/logo/eggyparty.webp" alt="Eggy Party">
+                        <h3>Eggy Party</h3>
+                        <h4>Exptional Global</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/supersus.html">
+                        <img src="topupgame/logo/supersus.webp" alt="Super Sus">
+                        <h3>Super Sus</h3>
+                        <h4>PIProductions</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/metalslug.html">
+                        <img src="topupgame/logo/metalslug.png" alt="Metal Slug: Awakening">
+                        <h3>Metal Slug: Awakening</h3>
+                        <h4>VNG</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/tomandjerry.html">
+                        <img src="topupgame/logo/tomandjerry.webp" alt="Tom and Jerry: Chase">
+                        <h3>Tom and Jerry: Chase</h3>
+                        <h4>NetEase Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/captaintsubasa.html">
+                        <img src="topupgame/logo/captaintsubasa.webp" alt="Captain Tsubasa: Ace">
+                        <h3>Captain Tsubasa: Ace</h3>
+                        <h4>Program Twenty Three</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/onepunchman.html">
+                        <img src="topupgame/logo/onepunchman.webp" alt="ONE PUNCH MAN: The Strongest">
+                        <h3>ONE PUNCH MAN:<br>The Strongest</h3>
+                        <h4>FingerFun Limited</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/harrypotter.html">
+                        <img src="topupgame/logo/harrypotter.webp" alt="Harry Potter: Magic Awakened">
+                        <h3>Harry Potter:<br>Magic Awakened</h3>
+                        <h4>Exptional Global</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/growtopia.html">
+                        <img src="topupgame/logo/growtopia.webp" alt="Growtopia">
+                        <h3>Growtopia</h3>
+                        <h4>Ubisoft Entertainment</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/zepeto.html">
+                        <img src="topupgame/logo/zepeto.webp" alt="Zepeto">
+                        <h3>Zepeto</h3>
+                        <h4>Zepeto</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/hago.html">
+                        <img src="topupgame/logo/hago.webp" alt="Hago">
+                        <h3>Hago</h3>
+                        <h4>Hago</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/speeddrifters.html">
+                        <img src="topupgame/logo/speeddrifters.webp" alt="Speed Drifters">
+                        <h3>Speed Drifters</h3>
+                        <h4>Garena</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/legendofmushroom.html">
+                        <img src="topupgame/logo/legendofmushroom.webp" alt="Legend of Mushroom: Rush Sea">
+                        <h3>Legend of Mushroom:<br>Rush - Sea</h3>
+                        <h4>SPARKGAME LIMITED</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/heroicunclekim.html">
+                        <img src="topupgame/logo/heroicunclekim.webp" alt="Heroic Uncle Kim">
+                        <h3>Heroic Uncle Kim</h3>
+                        <h4>GA Studio</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/afkjourney.html">
+                        <img src="topupgame/logo/afkjourney.webp" alt="AFK Journey">
+                        <h3>AFK Journey</h3>
+                        <h4>FARLIGHT</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/arenabreakout.html">
+                        <img src="topupgame/logo/arenabreakout.webp" alt="Arena Breakout">
+                        <h3>Arena Breakout</h3>
+                        <h4>Level Infinite</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/onmyojiarena.html">
+                        <img src="topupgame/logo/onmyojiarena.webp" alt="Onmyoji Arena">
+                        <h3>Onmyoji Arena</h3>
+                        <h4>NetEase Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/pathtonowhere.html">
+                        <img src="topupgame/logo/pathtonowhere.webp" alt="Path to Nowhere">
+                        <h3>Path to Nowhere</h3>
+                        <h4>AISNO Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/punishinggrayraven.html">
+                        <img src="topupgame/logo/punishinggrayraven.webp" alt="Punishing: Gray Raven">
+                        <h3>Punishing: Gray Raven</h3>
+                        <h4>KURO TECHNOLOGY</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/legendsofruneterra.html">
+                        <img src="topupgame/logo/legendsofruneterra.webp" alt="Legends of Runeterra">
+                        <h3>Legends of Runeterra</h3>
+                        <h4>Riot Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/legacyfate.html">
+                        <img src="topupgame/logo/legacyfate.webp" alt="Legacy Fate: Sacred & Fearless">
+                        <h3>Legacy Fate:<br>Sacred & Fearless</h3>
+                        <h4>EYOUGAME(US)</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/snowbreak.html">
+                        <img src="topupgame/logo/snowbreak.webp" alt="Snowbreak: Containment Zone">
+                        <h3>Snowbreak:<br>Containment Zone</h3>
+                        <h4>Seasun Games</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/loveanddeepspace.html">
+                        <img src="topupgame/logo/loveanddeepspace.webp" alt="Love and Deepspace">
+                        <h3>Love and Deepspace</h3>
+                        <h4>InFold</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/thelordoftherings.html">
+                        <img src="topupgame/logo/thelordoftherings.webp" alt="The Lord of The Rings: War">
+                        <h3>The Lord of The Rings: War</h3>
+                        <h4>Exptional Global</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/heavenburnsred.html">
+                        <img src="topupgame/logo/heavenburnsred.webp" alt="Heaven Burns Red">
+                        <h3>Heaven Burns Red</h3>
+                        <h4>Yostar Limited</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/racingmaster.html">
+                        <img src="topupgame/logo/racingmaster.webp" alt="Racing Master">
+                        <h3>Racing Master</h3>
+                        <h4>Exptional Global</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/muorigin3.html">
+                        <img src="topupgame/logo/muorigin3.jpg" alt="MU ORIGIN 3: Astrology Mage">
+                        <h3>MU ORIGIN 3:<br>Astrology Mage</h3>
+                        <h4>FingerFun Limited</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="topupgame/octopathtraveler.html">
+                        <img src="topupgame/logo/octopathtraveler.webp" alt="OCTOPATH TRAVELER: CotC">
+                        <h3>OCTOPATH TRAVELER:<br>CotC</h3>
+                        <h4>Exptional Global</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="vouchergame">
+                    <div class="catalogue-item" data-link="vouchergame/roblox.html">
+                        <img src="vouchergame/logo/roblox.png" alt="Roblox">
+                        <h3>Roblox</h3>
+                        <h4>Roblox Corporation</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/garenashell.html">
+                        <img src="vouchergame/logo/garenashell.jpg" alt="Garena Shell">
+                        <h3>Garena Shell</h3>
+                        <h4>Garena</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/pbv.html">
+                        <img src="vouchergame/logo/pb.webp" alt="Point Blank">
+                        <h3>Point Blank</h3>
+                        <h4>Zepetto</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/steam.html">
+                        <img src="vouchergame/logo/steam.jpg" alt="Steam">
+                        <h3>Steam (Indonesia)</h3>
+                        <h4>Steam</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/googleplay.html">
+                        <img src="vouchergame/logo/googleplay.jpg" alt="Google Play">
+                        <h3>Google Play (Indonesia)</h3>
+                        <h4>Google</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/playstation.html">
+                        <img src="vouchergame/logo/playstation.jpg" alt="Playstation">
+                        <h3>Playstation (Indonesia)</h3>
+                        <h4>Playstation</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="vouchergame/nvidiageforcenow.html">
+                        <img src="vouchergame/logo/nvidiageforcenow.jpg" alt="Nvidia Geforce NOW">
+                        <h3>GeForce NOW</h3>
+                        <h4>Nvidia</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="apppremium">
+                    <div class="catalogue-item" data-link="apppremium/alightmotion.html">
+                        <img src="apppremium/logo/alightmotion.webp" alt="Alight Motion">
+                        <h3>Alight Motion</h3>
+                        <h4>Alight Creative, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/capcut.html">
+                        <img src="apppremium/logo/capcut.jpg" alt="CapCut">
+                        <h3>CapCut</h3>
+                        <h4>ByteDance Pte. Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/netflix.html">
+                        <img src="apppremium/logo/netflix.webp" alt="Netflix">
+                        <h3>Netflix</h3>
+                        <h4>Netflix, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/disney.html">
+                        <img src="apppremium/logo/disney.webp" alt="Disney+">
+                        <h3>Disney+</h3>
+                        <h4>The Walt Disney Company</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/spotify.html">
+                        <img src="apppremium/logo/spotify.webp" alt="Spotify">
+                        <h3>Spotify</h3>
+                        <h4>Spotify AB</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/applemusic.html">
+                        <img src="apppremium/logo/applemusic.jpg" alt="Apple Music">
+                        <h3>Apple Music</h3>
+                        <h4>Apple Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/wink.html">
+                        <img src="apppremium/logo/wink.webp" alt="Wink">
+                        <h3>Wink</h3>
+                        <h4>Wink App Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/canva.html">
+                        <img src="apppremium/logo/canva.webp" alt="Canva">
+                        <h3>Canva</h3>
+                        <h4>Canva Pty Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/hbomax.html">
+                        <img src="apppremium/logo/hbomax.webp" alt="HBO Max">
+                        <h3>HBO Max</h3>
+                        <h4>Warner Bros. Discovery, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/primevideo.html">
+                        <img src="apppremium/logo/primevideo.webp" alt="Prime Video">
+                        <h3>Prime Video</h3>
+                        <h4>Amazon.com, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/chatgpt.html">
+                        <img src="apppremium/logo/chatgpt.webp" alt="ChatGPT">
+                        <h3>ChatGPT</h3>
+                        <h4>OpenAI, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/geminiai.html">
+                        <img src="apppremium/logo/geminiai.webp" alt="Gemini AI">
+                        <h3>Gemini AI</h3>
+                        <h4>Google LLC</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/ibispaint.html">
+                        <img src="apppremium/logo/ibispaint.webp" alt="Ibis Paint">
+                        <h3>Ibis Paint</h3>
+                        <h4>ibis inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/picsart.html">
+                        <img src="apppremium/logo/picsart.webp" alt="PicsArt">
+                        <h3>PicsArt</h3>
+                        <h4>PicsArt, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/blackboxai.html">
+                        <img src="apppremium/logo/blackboxai.webp" alt="Blackbox AI">
+                        <h3>Blackbox AI</h3>
+                        <h4>Blackbox AI, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/cramlyai.html">
+                        <img src="apppremium/logo/cramlyai.jpg" alt="Cramly AI">
+                        <h3>Cramly AI</h3>
+                        <h4>Cramly, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/youtube.html">
+                        <img src="apppremium/logo/youtube.webp" alt="YouTube">
+                        <h3>YouTube</h3>
+                        <h4>Google LLC</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/googledrive.html">
+                        <img src="apppremium/logo/googledrive.webp" alt="Google Drive">
+                        <h3>Google Drive</h3>
+                        <h4>Google LLC</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/bstation.html">
+                        <img src="apppremium/logo/bstation.webp" alt="Bstation">
+                        <h3>Bstation</h3>
+                        <h4>Bilibili Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/loklok.html">
+                        <img src="apppremium/logo/loklok.webp" alt="LokLok">
+                        <h3>LokLok</h3>
+                        <h4>Loklok Video Pte. Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/duolingo.html">
+                        <img src="apppremium/logo/duolingo.webp" alt="Duolingo">
+                        <h3>Duolingo</h3>
+                        <h4>Duolingo, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/brainly.html">
+                        <img src="apppremium/logo/brainly.webp" alt="Brainly">
+                        <h3>Brainly</h3>
+                        <h4>Brainly Sp.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/viu.html">
+                        <img src="apppremium/logo/viu.jpg" alt="Viu">
+                        <h3>Viu</h3>
+                        <h4>PCCW Media Limited</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/wetv.html">
+                        <img src="apppremium/logo/wetv.webp" alt="WeTV">
+                        <h3>WeTV</h3>
+                        <h4>Tencent Holdings Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/grammarly.html">
+                        <img src="apppremium/logo/grammarly.webp" alt="Grammarly">
+                        <h3>Grammarly</h3>
+                        <h4>Grammarly, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/deepltranslate.html">
+                        <img src="apppremium/logo/deepltranslate.webp" alt="DeepL Translate">
+                        <h3>DeepL Translate</h3>
+                        <h4>DeepL SE</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/scribd.html">
+                        <img src="apppremium/logo/scribd.webp" alt="Scribd">
+                        <h3>Scribd</h3>
+                        <h4>Scribd, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/camscanner.html">
+                        <img src="apppremium/logo/camscanner.webp" alt="CamScanner">
+                        <h3>CamScanner</h3>
+                        <h4>INTSIG Information Co., Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/vidio.html">
+                        <img src="apppremium/logo/vidio.webp" alt="Vidio">
+                        <h3>Vidio</h3>
+                        <h4>PT Vidio Dot Com</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/catchplay.html">
+                        <img src="apppremium/logo/catchplay.jpg" alt="Catchplay">
+                        <h3>Catchplay</h3>
+                        <h4>CatchPlay, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/drakorid.html">
+                        <img src="apppremium/logo/drakorid.jpg" alt="Drakor ID">
+                        <h3>Drakor ID</h3>
+                        <h4>Drakor Indo Apps</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/dramabox.html">
+                        <img src="apppremium/logo/dramabox.webp" alt="DramaBox">
+                        <h3>DramaBox</h3>
+                        <h4>DramaBox Entertainment</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/designai.html">
+                        <img src="apppremium/logo/designai.jpg" alt="Design AI">
+                        <h3>Design AI</h3>
+                        <h4>Inmagine Group</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/epik.html">
+                        <img src="apppremium/logo/epik.webp" alt="Epik">
+                        <h3>Epik</h3>
+                        <h4>SNOW Corporation</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/fomz.html">
+                        <img src="apppremium/logo/fomz.webp" alt="Fomz">
+                        <h3>Fomz</h3>
+                        <h4>Fomz App Studio</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/beautyplus.html">
+                        <img src="apppremium/logo/beautyplus.webp" alt="BeautyPlus">
+                        <h3>BeautyPlus</h3>
+                        <h4>Meitu, Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/iflix.html">
+                        <img src="apppremium/logo/iflix.webp" alt="Iflix">
+                        <h3>Iflix</h3>
+                        <h4>Image Future Investment</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/genflix.html">
+                        <img src="apppremium/logo/genflix.webp" alt="Genflix">
+                        <h3>Genflix</h3>
+                        <h4>Festival Citra Lestari</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/dazzcam.html">
+                        <img src="apppremium/logo/dazzcam.jpg" alt="DazzCam">
+                        <h3>DazzCam</h3>
+                        <h4>Benrick Studio</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/faceapp.html">
+                        <img src="apppremium/logo/faceapp.jpg" alt="FaceApp">
+                        <h3>FaceApp</h3>
+                        <h4>FaceApp Technology Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/fizzo.html">
+                        <img src="apppremium/logo/fizzo.webp" alt="Fizzo">
+                        <h3>Fizzo</h3>
+                        <h4>ByteDance Pte. Ltd.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/goodnotes.html">
+                        <img src="apppremium/logo/goodnotes.jpg" alt="Good Notes">
+                        <h3>Good Notes 6</h3>
+                        <h4>Time Base Technology Limited</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/applearcade.html">
+                        <img src="apppremium/logo/applearcade.jpg" alt="Apple Arcade">
+                        <h3>Apple Arcade</h3>
+                        <h4>Apple Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/icloud.html">
+                        <img src="apppremium/logo/icloud.jpg" alt="iCloud">
+                        <h3>iCloud</h3>
+                        <h4>Apple Inc.</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/crunchyroll.html">
+                        <img src="apppremium/logo/crunchyroll.webp" alt="Crunchyroll">
+                        <h3>Crunchyroll</h3>
+                        <h4>Crunchyroll, LLC</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/ifake.html">
+                        <img src="apppremium/logo/ifake.webp" alt="iFake">
+                        <h3>iFake</h3>
+                        <h4>TNVApps</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/ilovepdf.html">
+                        <img src="apppremium/logo/ilovepdf.jpg" alt="iLovePDF">
+                        <h3>iLovePDF</h3>
+                        <h4>iLovePDF</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="apppremium/inshot.html">
+                        <img src="apppremium/logo/inshot.webp" alt="InShot">
+                        <h3>InShot</h3>
+                        <h4>InShot Video Editor</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="socialmediaboost">
+                    <div class="catalogue-item" data-link="socialmediaboost/tiktoklike.html">
+                        <img src="socialmediaboost/logo/tiktok.webp" alt="Boost Like TikTok">
+                        <h3>Boost Like</h3>
+                        <h4>TikTok</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="socialmediaboost/instagramlike.html">
+                        <img src="socialmediaboost/logo/instagram.webp" alt="Boost Like Instagram">
+                        <h3>Boost Like</h3>
+                        <h4>Instagram</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="socialmediaboost/tiktokview.html">
+                        <img src="socialmediaboost/logo/tiktok.webp" alt="Boost View TikTok">
+                        <h3>Boost View</h3>
+                        <h4>TikTok</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="socialmediaboost/instagramfollower.html">
+                        <img src="socialmediaboost/logo/instagram.webp" alt="Boost Follower Instagram">
+                        <h3>Boost Follower</h3>
+                        <h4>Instagram</h4>
+                    </div>
+                </div>
+                <div class="catalogue-product" id="paidedit">
+                    <div class="catalogue-item" data-link="paidedit/video.html">
+                        <img src="paidedit/logo/video.jpg" alt="Edit Video">
+                        <h3>Edit Video</h3>
+                        <h4>Paid Edit</h4>
+                    </div>
+                    <div class="catalogue-item" data-link="paidedit/design.html">
+                        <img src="paidedit/logo/design.jpg" alt="Edit Design">
+                        <h3>Edit Design</h3>
+                        <h4>Paid Edit</h4></h4>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- FOOTER -->
+            <div class="footer-logo">
+                <img src="misc/image/footlogo.png" alt="TwinStar Logo">
+                <p>Pusat layanan digital tercepat, teraman, termurah dan terpercaya untuk Top-up Game, Voucher Game, App Premium, Social Media Boost, dan Paid Edit. Proses cepat, harga kaki lima, pelayanan bintang lima!</p>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-followus">
+                    <h4>FOLLOW US</h4>
+                        <div class="footer-followus-icon">
+                            <a href="https://www.instagram.com/twinstarid">
+                                <img src="misc/image/instagram.png" alt="TwinStar Instagram">
+                            </a>
+                            <a href="https://chat.whatsapp.com/HzeNmtnpCmhFxKnELSSNYp">
+                                <img src="misc/image/whatsapp.png" alt="TwinStar WhatsApp">
+                            </a>
+                            <a href="https://linktr.ee/twinstarid">
+                                <img src="misc/image/linktree.png" alt="TwinStar LinkTree">
+                            </a>
+                        </div>
+                </div>
+                <div class="footer-helpcenter">
+                    <h4>HELP CENTER</h4>
+                        <a href="https://wa.me/6282129678431">
+                            <button>Customer Service</button>
+                        </a>
+                </div>
+            </div>
+        </footer>
+        <script src="catalogue.js"></script>
+    </body>
+</html>
