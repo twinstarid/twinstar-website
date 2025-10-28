@@ -203,6 +203,7 @@ main {
 .customer-info-button input, select {
     font-family: "TSMedium";
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     margin: 8px 0;
     border-radius: 6px;
